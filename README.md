@@ -19,7 +19,9 @@ GPIO 25
 Just run the main.py on the raspberryPi
 
 --The Pin map of raspberryPi 4
+
 ![image](https://github.com/lewcherwyn/raspberryPi-GPIO-web-controller/blob/master/PinMap.png)
+
 
 --Preview images
 ![image](https://github.com/lewcherwyn/raspberryPi-GPIO-web-controller/blob/master/PC_preview.png)
