@@ -14,18 +14,23 @@ GPIO 21
 GPIO 25
 
 
+
 --How to use it? / 如何使用？
 
 Just run the main.py on the raspberryPi / 运行main.py文件即可
 
 
+
 --The default port is？ / 默认网页的端口是？
+
 --//0.0.0.0:5600 / 访问5600端口即可
+
 
 
 --The Pin map of raspberryPi 4 / 树莓派4B的GPIO引脚图
 
 ![image](https://github.com/lewcherwyn/raspberryPi-GPIO-web-controller/blob/master/PinMap.png)
+
 
 
 --Preview images / 预览图
