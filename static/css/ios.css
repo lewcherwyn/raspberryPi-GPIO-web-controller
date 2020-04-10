@@ -1,0 +1,366 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.class3{
+	background-color:rgba(0,0,0,0.3);
+    display: block;
+	border-radius: 50px;
+	max-width: 500px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px
+}
+
+body{
+	color: yellow;
+	padding:1%;
+	text-align: center;
+	margin: 0 auto;
+    justify-content: center;
+    display: block;
+}
+
+
+.one{
+    display: block;
+    width: auto;
+    height: calc((var(--button-height))*1.35);
+    margin: 10px 0 0 0;
+    border-bottom: 1px solid rgb(150,150,150);
+}
+
+.two{
+    display: block;
+    width: auto;
+    height: calc((var(--button-height))*1.35);
+    margin: 10px 0 0 0;
+    border-bottom: 1px solid rgb(150,150,150);
+}
+
+.three{
+    display: block;
+    width: auto;
+    height: calc((var(--button-height))*1.35);
+    margin: 10px 0 0 0;
+    border-bottom: 1px solid rgb(150,150,150);
+}
+
+.four{
+    display: block;
+    width: auto;
+    height: calc((var(--button-height))*1.35);
+    margin: 10px 0 0 0;
+    border-bottom: 1px solid rgb(150,150,150);
+}
+
+.five{
+    display: block;
+    width: auto;
+    height: calc((var(--button-height))*1.35);
+    margin: 10px 0 0 0;
+    border-bottom: 1px solid rgb(150,150,150);
+}
+
+.control_text{
+    font-size:25px;
+    float: left;
+    margin-left:calc((var(--button-width))*1);
+    margin-top: -3px;
+}
+
+
+
+:root {
+    --button-width: 50px;
+    --button-height: 30px;
+
+    --toggle1-diameter: 25px;
+    --button-toggle1-offset: calc((var(--button-height) - var(--toggle1-diameter)) / 2);
+    --toggle1-shadow-offset: 1px;
+    --toggle1-wider: 33px;
+
+    --toggle2-diameter: 25px;
+    --button-toggle2-offset: calc((var(--button-height) - var(--toggle2-diameter)) / 2);
+    --toggle2-shadow-offset: 1px;
+    --toggle2-wider: 33px;
+
+    --toggle3-diameter: 25px;
+    --button-toggle3-offset: calc((var(--button-height) - var(--toggle3-diameter)) / 2);
+    --toggle3-shadow-offset: 1px;
+    --toggle3-wider: 33px;
+
+    --toggle4-diameter: 25px;
+    --button-toggle4-offset: calc((var(--button-height) - var(--toggle4-diameter)) / 2);
+    --toggle4-shadow-offset: 1px;
+    --toggle4-wider: 33px;
+
+    --toggle5-diameter: 25px;
+    --button-toggle5-offset: calc((var(--button-height) - var(--toggle5-diameter)) / 2);
+    --toggle5-shadow-offset: 1px;
+    --toggle5-wider: 33px;
+
+    --color-grey: #E9E9E9;
+    --color-dark-grey: #39393D;
+    --color-green: #30D158;
+}
+
+span1 {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: .3s all ease-in-out;
+    float: right;
+    right: calc((var(--button-width))*1);
+}
+
+span1::after {
+  content: '';
+  display: inline-block;
+  width: var(--toggle1-diameter);
+  height: var(--toggle1-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle1-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle1-offset);
+  left: calc(var(--button-toggle1-offset) / 16);
+  transform: translateX(var(--button-toggle1-offset));
+  box-shadow: var(--toggle1-shadow-offset) 0 calc(var(--toggle1-shadow-offset) * 4) rgba(0, 0, 0, .10);
+  transition: .3s all ease-in-out;
+}
+
+input[type="checkbox"]:checked + span1 {
+  background-color: var(--color-green);
+}
+
+input[type="checkbox"]:checked + span1::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle1-diameter) - var(--button-toggle1-offset)));
+  box-shadow: calc(var(--toggle1-shadow-offset) * -1) 0 calc(var(--toggle1-shadow-offset) * 4) rgba(0, 0, 0, .10);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:active + span1::after {
+  width: var(--toggle1-wider);
+}
+
+input[type="checkbox"]:checked:active + span1::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle1-wider) - var(--button-toggle1-offset)));
+}
+
+
+
+
+span2 {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: .3s all ease-in-out;
+    float: right;
+    right: calc((var(--button-width))*1);
+}
+
+span2::after {
+    content: '';
+    display: inline-block;
+    width: var(--toggle2-diameter);
+    height: var(--toggle2-diameter);
+    background-color: #fff;
+    border-radius: calc(var(--toggle2-diameter) / 2);
+    position: absolute;
+    top: var(--button-toggle2-offset);
+    left: calc(var(--button-toggle2-offset) / 16);
+    transform: translateX(var(--button-toggle2-offset));
+    box-shadow: var(--toggle2-shadow-offset) 0 calc(var(--toggle2-shadow-offset) * 4) rgba(0, 0, 0, .10);
+    transition: .3s all ease-in-out;
+}
+
+input[type="checkbox"]:checked + span2 {
+  background-color: var(--color-green);
+}
+
+input[type="checkbox"]:checked + span2::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle2-diameter) - var(--button-toggle2-offset)));
+  box-shadow: calc(var(--toggle2-shadow-offset) * -1) 0 calc(var(--toggle2-shadow-offset) * 4) rgba(0, 0, 0, .10);
+}
+
+
+input[type="checkbox"]:active + span2::after {
+  width: var(--toggle2-wider);
+}
+
+input[type="checkbox"]:checked:active + span2::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle2-wider) - var(--button-toggle2-offset)));
+}
+
+
+
+
+span3 {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: .3s all ease-in-out;
+    float: right;
+    right: calc((var(--button-width))*1);
+}
+
+span3::after {
+  content: '';
+  display: inline-block;
+  width: var(--toggle3-diameter);
+  height: var(--toggle3-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle3-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle3-offset);
+  left: calc(var(--button-toggle3-offset) / 16);
+  transform: translateX(var(--button-toggle3-offset));
+  box-shadow: var(--toggle3-shadow-offset) 0 calc(var(--toggle3-shadow-offset) * 4) rgba(0, 0, 0, .10);
+  transition: .3s all ease-in-out;
+}
+
+input[type="checkbox"]:checked + span3 {
+  background-color: var(--color-green);
+}
+
+input[type="checkbox"]:checked + span3::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle3-diameter) - var(--button-toggle3-offset)));
+  box-shadow: calc(var(--toggle3-shadow-offset) * -1) 0 calc(var(--toggle3-shadow-offset) * 4) rgba(0, 0, 0, .10);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:active + span3::after {
+  width: var(--toggle3-wider);
+}
+
+input[type="checkbox"]:checked:active + span3::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle3-wider) - var(--button-toggle3-offset)));
+}
+
+
+
+
+span4 {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: .3s all ease-in-out;
+    float: right;
+    right: calc((var(--button-width))*1);
+}
+
+span4::after {
+  content: '';
+  display: inline-block;
+  width: var(--toggle4-diameter);
+  height: var(--toggle4-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle4-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle4-offset);
+  left: calc(var(--button-toggle4-offset) / 16);
+  transform: translateX(var(--button-toggle4-offset));
+  box-shadow: var(--toggle4-shadow-offset) 0 calc(var(--toggle4-shadow-offset) * 4) rgba(0, 0, 0, .10);
+  transition: .3s all ease-in-out;
+}
+
+input[type="checkbox"]:checked + span4 {
+  background-color: var(--color-green);
+}
+
+input[type="checkbox"]:checked + span4::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle4-diameter) - var(--button-toggle4-offset)));
+  box-shadow: calc(var(--toggle4-shadow-offset) * -1) 0 calc(var(--toggle4-shadow-offset) * 4) rgba(0, 0, 0, .10);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:active + span4::after {
+  width: var(--toggle4-wider);
+}
+
+input[type="checkbox"]:checked:active + span4::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle4-wider) - var(--button-toggle4-offset)));
+}
+
+
+span5 {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: .3s all ease-in-out;
+    float: right;
+    right: calc((var(--button-width))*1);
+}
+
+span5::after {
+  content: '';
+  display: inline-block;
+  width: var(--toggle5-diameter);
+  height: var(--toggle5-diameter);
+  background-color: #fff;
+  border-radius: calc(var(--toggle5-diameter) / 2);
+  position: absolute;
+  top: var(--button-toggle5-offset);
+  left: calc(var(--button-toggle5-offset) / 16);
+  transform: translateX(var(--button-toggle5-offset));
+  box-shadow: var(--toggle5-shadow-offset) 0 calc(var(--toggle5-shadow-offset) * 4) rgba(0, 0, 0, .10);
+  transition: .3s all ease-in-out;
+}
+
+input[type="checkbox"]:checked + span5 {
+  background-color: var(--color-green);
+}
+
+input[type="checkbox"]:checked + span5::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle5-diameter) - var(--button-toggle5-offset)));
+  box-shadow: calc(var(--toggle5-shadow-offset) * -1) 0 calc(var(--toggle5-shadow-offset) * 4) rgba(0, 0, 0, .10);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:active + span5::after {
+  width: var(--toggle5-wider);
+}
+
+input[type="checkbox"]:checked:active + span5::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle5-wider) - var(--button-toggle5-offset)));
+}
+
+
+
+
+@media(prefers-color-scheme: dark) {
+
+  span {
+    background-color: var(--color-dark-grey);
+  }
+}
+
